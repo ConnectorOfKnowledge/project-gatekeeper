@@ -15,13 +15,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'The Gauntlet',
+  title: 'Project Gatekeeper',
   description: 'This encounter requires a high-fidelity connection.',
   robots: { index: false, follow: false },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'The Gauntlet',
+    title: 'Project Gatekeeper',
   },
   formatDetection: {
     telephone: false,
