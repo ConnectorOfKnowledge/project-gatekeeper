@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
+const hasTicketDeck = (() => {
+  try { require.resolve("ticketdeck"); return true; } catch { return false; }
+})();
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  transpilePackages: hasTicketDeck ? ["ticketdeck"] : [],
 };
 
 export default nextConfig;

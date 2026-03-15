@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "node scripts/fix-ticketdeck.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -15,7 +16,9 @@
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "three": "^0.183.1",
+    "three": "^0.183.1"
+  },
+  "optionalDependencies": {
     "ticketdeck": "file:../ticketdeck"
   },
   "devDependencies": {
