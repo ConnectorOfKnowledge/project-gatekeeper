@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-mirror-bg: #0a0a0f;
+  --color-mirror-surface: #12121a;
+  --color-mirror-surface-hover: #1a1a25;
+  --color-mirror-border: #2a2a3a;
+  --color-mirror-text: #e4e4ef;
+  --color-mirror-text-dim: #8888a0;
+  --color-mirror-accent: #6366f1;
+  --color-mirror-accent-glow: #818cf8;
+  --color-mirror-success: #34d399;
+  --color-mirror-warning: #fbbf24;
+  --color-mirror-user: #3b82f6;
+  --color-mirror-clone: #8b5cf6;
+}
+
+body {
+  background-color: var(--color-mirror-bg);
+  color: var(--color-mirror-text);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-mirror-border);
+  border-radius: 3px;
+}
+
+/* Typing indicator animation */
+@keyframes pulse-dot {
+  0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1); }
+}
+.typing-dot {
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* Glow effect for the clone's messages */
+.clone-glow {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+}
